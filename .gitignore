@@ -1,0 +1,14 @@
+# Environment — never commit credentials
+.env
+
+# Generated content — output only
+drafts/
+
+# Node (MCP servers)
+node_modules/
+dist/
+*.js.map
+
+# OS noise
+.DS_Store
+Thumbs.db

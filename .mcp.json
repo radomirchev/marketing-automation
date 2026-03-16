@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "gateway-api": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["./mcp-servers/gateway-api/dist/index.js"],
+      "env": {
+        "GATEWAY_TOKEN": "${GATEWAY_TOKEN}",
+        "GATEWAY_BASE_URL": "https://ai-agent-gateway.infragistics.com"
+      }
+    },
+    "blog-strategy-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["../blog-strategy-mcp/dist/index.js"],
+      "env": {
+        "GATEWAY_TOKEN": "${GATEWAY_TOKEN}"
+      }
+    }
+  }
+}
