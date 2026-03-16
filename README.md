@@ -36,7 +36,7 @@ marketing-orchestrator   ← classifies and routes
 ### 1. Clone and enter the repo
 
 ```bash
-git clone https://github.com/IgniteUI/marketing-automation.git
+git clone https://github.com/radomirchev/marketing-automation.git
 cd marketing-automation
 ```
 
