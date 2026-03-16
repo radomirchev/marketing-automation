@@ -3,7 +3,7 @@
     "gateway-api": {
       "type": "stdio",
       "command": "node",
-      "args": ["./mcp-servers/gateway-api/dist/index.js"],
+      "args": ["./mcp-servers/gateway-api/server.js"],
       "env": {
         "GATEWAY_TOKEN": "${GATEWAY_TOKEN}",
         "GATEWAY_BASE_URL": "https://ai-agent-gateway.infragistics.com"
@@ -16,12 +16,6 @@
       "env": {
         "GATEWAY_TOKEN": "${GATEWAY_TOKEN}"
       }
-    },
-    "igniteui-theming": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "igniteui-theming-mcp"],
-      "env": {}
     }
   }
 }
