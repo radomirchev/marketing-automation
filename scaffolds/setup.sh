@@ -50,6 +50,10 @@ setup_angular() {
 
   echo "Verifying TypeScript compiler..."
   npx tsc --version
+
+  echo "Syncing Ignite UI Skills from node_modules..."
+  cd "$SCAFFOLDS_DIR"
+  bash sync-skills.sh angular
   echo "Angular scaffold — READY"
 }
 

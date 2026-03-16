@@ -22,3 +22,7 @@ scaffolds/react/dist/
 # Keep template files
 scaffolds/angular/src/app/verify/verify.component.ts.template
 scaffolds/react/src/VerifyComponent.tsx.template
+
+# MCP server build output — built locally, not committed
+mcp-servers/*/node_modules/
+mcp-servers/*/dist/
