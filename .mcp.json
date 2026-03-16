@@ -16,6 +16,12 @@
       "env": {
         "GATEWAY_TOKEN": "${GATEWAY_TOKEN}"
       }
+    },
+    "igniteui-theming": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "igniteui-theming-mcp"],
+      "env": {}
     }
   }
 }

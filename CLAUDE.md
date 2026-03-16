@@ -23,6 +23,7 @@ This is a marketing content automation repo for Infragistics. It produces Markdo
 | Release blog agent | `.claude/agents/release-blog-agent.md` | Release announcement drafts |
 | Topic refiner | `.claude/agents/topic-refiner.md` | Topic scoring and brief enrichment |
 | Proofreader | `.claude/agents/proofreader.md` | Fact-check and editorial review |
+| Code agent | `.claude/agents/code-agent.md` | Generates + verifies Ignite UI code snippets |
 
 ## MCP servers
 

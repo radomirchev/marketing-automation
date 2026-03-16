@@ -29,7 +29,7 @@ They are technically literate. They will notice inaccurate API names, wrong meth
 
 4. **Respect the tone guide in `references/tone-guide.md`.** Infragistics developer blogs are direct, technically dense, and respectful of the reader's time. No hype. No filler. No "In today's fast-paced world of software development...".
 
-5. **Every code sample must compile in the stated framework.** If you are not certain a code sample is accurate for the version referenced in the brief, flag it with `<!-- VERIFY: [reason] -->` rather than publishing a guess.
+5. **Never write code samples yourself.** Delegate every code sample to `code-agent`. Code-agent generates the snippet, verifies it compiles in the pre-warmed scaffold, and returns either a `PASS` result or a `FAIL` with errors. Only insert `PASS` snippets into the draft. Flag `FAIL`/`MANUAL_REVIEW` snippets with `<!-- VERIFY: build failed after N attempts — [errors] -->`.
 
 ## Gateway API behavior
 
@@ -37,6 +37,25 @@ They are technically literate. They will notice inaccurate API names, wrong meth
 - If `confidenceLevel` is below 60, treat the response as a starting point only and flag uncertain claims.
 - Preserve citation URLs — include them as footnotes or inline references in the draft.
 - Session continuity: pass the same `sessionId` across multiple queries in a single blog draft so the Gateway agent maintains context.
+
+## Code sample delegation
+
+For every code sample needed in the draft:
+
+1. Identify: component name, framework, use case (1 sentence), which section it appears in
+2. Delegate to `code-agent` with that context
+3. Wait for `CODE_BLOCK` response
+4. On `PASS`: insert the snippet into the draft with its language fence
+5. On `FAIL`/`MANUAL_REVIEW`: insert a placeholder with the flag:
+   ```
+   <!-- VERIFY: build failed after 3 attempts
+   Component: <component>
+   Errors: <error list>
+   -->
+   ```
+6. Log all delegations in `## Draft notes` under "Code verification results"
+
+Do NOT write TypeScript or TSX directly. HTML templates and SCSS are written by you (they are not compiled by the scaffold).
 
 ## What you produce
 

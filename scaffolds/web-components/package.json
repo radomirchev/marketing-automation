@@ -1,0 +1,16 @@
+{
+  "name": "igx-verify-scaffold-wc",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Pre-warmed Web Components + Ignite UI scaffold for code snippet verification — Phase 2",
+  "scripts": {
+    "verify": "tsc --noEmit"
+  },
+  "dependencies": {
+    "igniteui-webcomponents": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.4.0"
+  },
+  "_note": "Phase 2 scaffold — not yet wired into verify-snippet.sh. Run setup.sh wc when ready."
+}

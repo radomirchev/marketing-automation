@@ -12,3 +12,13 @@ dist/
 # OS noise
 .DS_Store
 Thumbs.db
+
+# Scaffold dependencies — installed by scaffolds/setup.sh, not committed
+scaffolds/angular/node_modules/
+scaffolds/angular/dist/
+scaffolds/angular/.angular/
+scaffolds/react/node_modules/
+scaffolds/react/dist/
+# Keep template files
+scaffolds/angular/src/app/verify/verify.component.ts.template
+scaffolds/react/src/VerifyComponent.tsx.template

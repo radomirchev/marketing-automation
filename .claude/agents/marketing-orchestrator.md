@@ -88,7 +88,7 @@ Good clarifying question pattern:
 
 If the request is clearly for multiple types of content (e.g. "write a blog and a release post for v18.2"), handle them sequentially: complete one full workflow before starting the next.
 
-## What you never do
+| `code-agent` | code-agent receives a delegation from blog-agent or release-blog-agent — not routed directly by orchestrator |
 
 - Do not write draft content yourself
 - Do not query the Gateway API directly — that is the specialist agents' job

@@ -8,9 +8,12 @@ There is no application source code. The "product" this repo produces is Markdow
 
 ## Commands
 
-- No build step required
+- No build step required for agents/skills
+- **First-time scaffold setup (run once):** `./scaffolds/setup.sh`
 - Validate a topic brief: `.claude/skills/generate-blog/scripts/validate-brief.sh <brief.json>`
 - Query the Gateway API: `.claude/skills/generate-blog/scripts/query-gateway.sh <productType> "<input>" [sessionId]`
+- Verify a code snippet manually: `.claude/skills/scaffold-and-verify/scripts/verify-snippet.sh <framework> <snippet-file>`
+- Check scaffold readiness: `ls scaffolds/angular/node_modules && echo "Angular ready"`
 - List current drafts: `ls drafts/`
 
 ## Working rules
@@ -28,8 +31,11 @@ There is no application source code. The "product" this repo produces is Markdow
 - `.claude/rules/` — Scoped Claude project rules (path-gated via `paths:` frontmatter)
 - `.claude/skills/` — Reusable multi-step workflows, each a folder with `SKILL.md`
 - `.claude/settings.json` — Claude Code project settings and hooks
-- `scripts/hooks/` — Shell scripts called by hooks at session lifecycle events
+- `scaffolds/` — Pre-warmed Angular + React projects with Ignite UI installed
+- `scaffolds/setup.sh` — One-time setup script (run after clone)
+- `scripts/hooks/` — Session lifecycle scripts
 - `drafts/` — Output folder for generated content; gitignored; do not edit directly
+- `skills/` — External Ignite UI skill files (see `skills/README.md` for wiring options)
 
 ## Agent conventions
 
